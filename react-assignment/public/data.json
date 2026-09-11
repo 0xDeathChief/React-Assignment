@@ -90,16 +90,6 @@
     "badge": "Essential"
   },
   {
-    "id": "java",
-    "name": "Java",
-    "category": "Language",
-    "description": "A secure, object-oriented programming language designed for portability and scale.",
-    "icon": "https://cdn.simpleicons.org/openjdk/FFFFFF", 
-    "rating": 4.6,
-    "difficulty": "Intermediate",
-    "badge": "Robust"
-  },
-  {
     "id": "tailwind",
     "name": "Tailwind CSS",
     "category": "Styling",
