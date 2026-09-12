@@ -22,7 +22,9 @@ const Content = ({ data }: { data: Promise<ContentType[]> }) => {
                                     alt={content.name}
                                     className="rounded-xl w-10 h-10"
                                 />
-                                <div className="rounded-full w-25 h-3xl flex justify-center items-center">{content.badge}</div>
+                                <div className="rounded-full w-25 h-auto flex justify-center items-center" style={{ backgroundColor: content.color, color: 'white' }}>
+                                    {content.badge}
+                                </div>
                             </figure>
 
                             <h2 className="font-bold px-10 py-3 text-2xl">
