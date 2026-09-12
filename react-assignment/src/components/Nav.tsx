@@ -5,7 +5,7 @@ const Nav = () => {
     const [active, setActive] = useState("home");
 
     return (
-        <div className='border-b border-[#F1F5F9] h-20'>
+        <div className='fixed top-0 left-0 w-full z-50 bg-white border-b border-[#F1F5F9] h-20'>
             <nav className='container mx-auto h-full'>
                 <div className='flex justify-between items-center h-full font-[Plus Jakarta Sans]'>
                     <img src={Logo} alt="Logo" />
