@@ -10,7 +10,7 @@ const Nav = () => {
                 <div className='flex justify-between items-center h-full font-[Plus Jakarta Sans]'>
                     <img src={Logo} alt="Logo" />
 
-                    <ul className='flex justify-between gap-[29px]'>
+                    <ul className='flex justify-between gap-7.25'>
                         <li onClick={() => setActive("home")} className={active === 'home' ? "text-[#DB2777]": " "}>Home</li>
                         <li onClick={() => setActive("technology")} className={active === 'technology' ? "text-[#DB2777]": " "}>Technology</li>
                         <li onClick={() => setActive("projects")} className={active === 'projects' ? "text-[#DB2777]": " "}>Projects</li>
