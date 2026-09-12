@@ -1,4 +1,4 @@
-import BannerImg from '../assets/banner-img.png';
+import BannerImg from '../assets/banner-stack.png';
 
 const Banner = () => {
     return (
