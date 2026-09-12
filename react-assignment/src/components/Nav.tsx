@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Logo from "../../../B14-A05-DevStack/assets/logo-text.png";
+import { useState } from 'react';
+import Logo from "../assets/logo-text.png";
 const Nav = () => {
     
     const [active, setActive] = useState("home");
