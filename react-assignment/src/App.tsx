@@ -3,6 +3,7 @@ import Banner from './components/Banner';
 import Content from './components/Content';
 import type { ContentType } from './datatype/dataType';
 import { Suspense } from 'react';
+import Footer from './components/Footer';
 
 
 
@@ -21,11 +22,12 @@ function App() {
     <>
       <Nav />
       <Banner />
-      
 
       <Suspense fallback={<h2>Loading...</h2>}>
             <Content data={data}/>
       </Suspense>
+      
+      <Footer/>
     </>
   );
 }
