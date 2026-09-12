@@ -1,9 +1,6 @@
-import { useState } from 'react';
 import Logo from "../assets/logo-text.png";
 const Nav = () => {
     
-    const [active, setActive] = useState("home");
-
     return (
         <div className='fixed top-0 left-0 w-full z-50 bg-white border-b border-[#F1F5F9] h-20'>
             <nav className='container mx-auto h-full'>
@@ -11,11 +8,11 @@ const Nav = () => {
                     <img src={Logo} alt="Logo" />
 
                     <ul className='flex justify-between gap-7.25'>
-                        <li onClick={() => setActive("home")} className={active === 'home' ? "text-[#DB2777]": " "}>Home</li>
-                        <li onClick={() => setActive("technology")} className={active === 'technology' ? "text-[#DB2777]": " "}>Technology</li>
-                        <li onClick={() => setActive("projects")} className={active === 'projects' ? "text-[#DB2777]": " "}>Projects</li>
-                        <li onClick={() => setActive("about")} className={active === 'about' ? "text-[#DB2777]": " "}>About</li>
-                        <li onClick={() => setActive("contact")} className={active === 'contact' ? "text-[#DB2777]": " "}>Contact</li>
+                        <li className="text-[#DB2777]">Home</li>
+                        <li>Technology</li>
+                        <li>Projects</li>
+                        <li>About</li>
+                        <li>Contact</li>
                     </ul>
 
                     <div className='flex gap-3'>
