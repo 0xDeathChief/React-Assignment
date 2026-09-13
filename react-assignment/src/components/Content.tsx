@@ -1,3 +1,4 @@
+import { RxCross2 } from "react-icons/rx";
 import { use } from 'react';
 import type { ContentType } from '../datatype/dataType';
 import { useState } from 'react';
@@ -21,10 +22,16 @@ const Content = ({ data }: ContentProps) => {
     const addToStack = (content: ContentType) => {
         if (isSelected(content)) return;
         setStack([...stack, content]);
-        toast.success("added to your stack");
+        toast.success(`${content.name} added to your stack`);
     };
 
+    const removeFromStack = (content: ContentType) => {
+        const newStack = stack.filter((item) => item.name !== content.name);
+        setStack(newStack);
+        toast.error("removed from your stack");
+    }
 
+    
 
     return (
         <>
@@ -66,7 +73,7 @@ const Content = ({ data }: ContentProps) => {
 
                             <div className="px-10 pb-10">
                                 {isSelected(content) ? (
-                                    <button className="btn w-full rounded-full bg-[#0F172A] hover:bg-[#1E293B] text-white border-none">
+                                    <button className="btn w-full rounded-full bg-[#0F172A] hover:bg-[#1E293B] text-white border-none" onClick={() => removeFromStack(content)}>
                                         Remove
                                     </button>
                                 ) : (
@@ -97,11 +104,8 @@ const Content = ({ data }: ContentProps) => {
                             <div className="flex flex-col gap-1 max-h-80 overflow-y-auto pr-1">
                                 {stack.map((content: ContentType) => (
                                     <div key={content.name} className="flex items-center gap-4 py-3 border-b border-[#F1F5F9] last:border-none">
-                                        <img
-                                            src={content.icon}
-                                            alt={content.name}
-                                            className="w-8 h-8 rounded"
-                                        />
+                                        <img src={content.icon} alt={content.name} className="w-8 h-8 rounded" />
+
                                         <div className="flex-1">
                                             <h3 className="font-semibold">
                                                 {content.name}
@@ -110,10 +114,12 @@ const Content = ({ data }: ContentProps) => {
                                                 {content.category}
                                             </p>
                                         </div>
-                                        
+                                        <button onClick={() => removeFromStack(content)} className="text-gray-400">
+                                            <RxCross2 />
+                                        </button>
                                     </div>
                                 ))}
-                            </div>
+                            </div>  
                         </div>
                     )}
                 </div>
