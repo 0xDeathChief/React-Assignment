@@ -24,7 +24,7 @@ function App() {
       <Banner />
 
       <Suspense fallback={<h2>Loading...</h2>}>
-            <Content data={data}/>
+            <Content data={data} />
       </Suspense>
       
       <Footer/>
