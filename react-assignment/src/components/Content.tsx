@@ -22,7 +22,7 @@ const Content = ({ data }: ContentProps) => {
     const addToStack = (content: ContentType) => {
         if (isSelected(content)) return;
         setStack([...stack, content]);
-        toast.success(`${content.name} added to your stack`);
+        toast.success("added to your stack");
     };
 
     const removeFromStack = (content: ContentType) => {
@@ -31,7 +31,10 @@ const Content = ({ data }: ContentProps) => {
         toast.error("removed from your stack");
     }
 
-    
+    const removeAll = () => {
+        setStack([]);
+        toast.error('Stack cleared');
+    }
 
     return (
         <>
@@ -119,7 +122,10 @@ const Content = ({ data }: ContentProps) => {
                                         </button>
                                     </div>
                                 ))}
-                            </div>  
+                            </div>
+                            <button onClick={removeAll} className="btn btn-neutral btn-block mt-4 rounded-2xl">
+                                Remove All
+                            </button>
                         </div>
                     )}
                 </div>
